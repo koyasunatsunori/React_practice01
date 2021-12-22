@@ -1,4 +1,4 @@
-import { Page2 } from "../Page1";
+import { Page2 } from "../Page2";
 import { UrlParameter } from "../UrlParameter";
 
 export const Page2Routes = [
@@ -8,8 +8,10 @@ export const Page2Routes = [
     children: <Page2 />
   },
   {
-    path: "/detailA",
+    path: "/:id",
     exact: false,
     children: <UrlParameter />
+    //UrlParameterを利用する場合、pathの指定が異なる
+    //:(コロン)のあとにパラメータを受け取る
   }
 ];
